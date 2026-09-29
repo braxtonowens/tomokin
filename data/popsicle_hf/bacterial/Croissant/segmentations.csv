@@ -1,0 +1,318 @@
+run,voxel_size,user_id,session_id,name,is_multilabel,url,portal_object_name,portal_session_id,portal_annotation_id,portal_annotation_file_id
+3434,20.0,data-portal,245642,intermembrane-space,false,10053/dga2017-01-14-21/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134263,245642
+3434,20.0,data-portal,245638,cytosole,false,10053/dga2017-01-14-21/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134261,245638
+3434,20.0,data-portal,245640,membrane,false,10053/dga2017-01-14-21/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134262,245640
+3466,20.0,data-portal,246224,cytosole,false,10054/dga2016-09-09-26/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134554,246224
+3466,20.0,data-portal,246228,intermembrane-space,false,10054/dga2016-09-09-26/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134556,246228
+3466,20.0,data-portal,246226,membrane,false,10054/dga2016-09-09-26/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134555,246226
+3473,20.0,data-portal,246234,intermembrane-space,false,10054/dga2016-09-09-32/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134559,246234
+3473,20.0,data-portal,246232,membrane,false,10054/dga2016-09-09-32/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134558,246232
+3473,20.0,data-portal,246230,cytosole,false,10054/dga2016-09-09-32/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134557,246230
+3474,20.0,data-portal,246236,cytosole,false,10054/dga2016-09-09-33/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134560,246236
+3474,20.0,data-portal,246238,membrane,false,10054/dga2016-09-09-33/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134561,246238
+3474,20.0,data-portal,246240,intermembrane-space,false,10054/dga2016-09-09-33/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134562,246240
+3476,20.0,data-portal,246242,cytosole,false,10054/dga2016-09-09-35/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134563,246242
+3476,20.0,data-portal,246246,intermembrane-space,false,10054/dga2016-09-09-35/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134565,246246
+3476,20.0,data-portal,246244,membrane,false,10054/dga2016-09-09-35/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134564,246244
+3484,20.0,data-portal,246250,membrane,false,10054/dga2016-09-09-42/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134567,246250
+3484,20.0,data-portal,246252,intermembrane-space,false,10054/dga2016-09-09-42/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134568,246252
+3484,20.0,data-portal,246248,cytosole,false,10054/dga2016-09-09-42/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134566,246248
+3523,20.0,data-portal,246266,cytosole,false,10054/dga2016-09-09-78/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134575,246266
+3523,20.0,data-portal,246268,membrane,false,10054/dga2016-09-09-78/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134576,246268
+3523,20.0,data-portal,246270,intermembrane-space,false,10054/dga2016-09-09-78/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134577,246270
+3494,20.0,data-portal,246258,intermembrane-space,false,10054/dga2016-09-09-51/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134571,246258
+3494,20.0,data-portal,246256,membrane,false,10054/dga2016-09-09-51/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134570,246256
+3494,20.0,data-portal,246254,cytosole,false,10054/dga2016-09-09-51/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134569,246254
+3503,20.0,data-portal,246260,cytosole,false,10054/dga2016-09-09-6/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134572,246260
+3503,20.0,data-portal,246264,intermembrane-space,false,10054/dga2016-09-09-6/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134574,246264
+3503,20.0,data-portal,246262,membrane,false,10054/dga2016-09-09-6/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134573,246262
+4635,20.0,data-portal,246128,inclusion,false,10065/dga2016-01-13-25/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134506,246128
+4635,20.0,data-portal,246122,cytosole,false,10065/dga2016-01-13-25/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134503,246122
+4635,20.0,data-portal,246130,intermembrane-space,false,10065/dga2016-01-13-25/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134507,246130
+4635,20.0,data-portal,246126,membrane,false,10065/dga2016-01-13-25/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134505,246126
+4635,20.0,data-portal,246124,flagellum,false,10065/dga2016-01-13-25/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134504,246124
+4636,20.0,data-portal,246140,intermembrane-space,false,10065/dga2016-01-13-26/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134512,246140
+4636,20.0,data-portal,246134,flagellum,false,10065/dga2016-01-13-26/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134509,246134
+4636,20.0,data-portal,246138,inclusion,false,10065/dga2016-01-13-26/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134511,246138
+4636,20.0,data-portal,246136,membrane,false,10065/dga2016-01-13-26/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134510,246136
+4636,20.0,data-portal,246132,cytosole,false,10065/dga2016-01-13-26/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134508,246132
+4627,20.0,data-portal,246116,membrane,false,10065/dga2016-01-13-17/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134500,246116
+4627,20.0,data-portal,246114,flagellum,false,10065/dga2016-01-13-17/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134499,246114
+4627,20.0,data-portal,246112,cytosole,false,10065/dga2016-01-13-17/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134498,246112
+4627,20.0,data-portal,246120,intermembrane-space,false,10065/dga2016-01-13-17/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134502,246120
+4627,20.0,data-portal,246118,inclusion,false,10065/dga2016-01-13-17/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134501,246118
+4641,20.0,data-portal,246142,cytosole,false,10065/dga2016-01-13-30/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134513,246142
+4641,20.0,data-portal,246144,flagellum,false,10065/dga2016-01-13-30/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134514,246144
+4641,20.0,data-portal,246148,inclusion,false,10065/dga2016-01-13-30/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134516,246148
+4641,20.0,data-portal,246150,intermembrane-space,false,10065/dga2016-01-13-30/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134517,246150
+4641,20.0,data-portal,246146,membrane,false,10065/dga2016-01-13-30/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134515,246146
+4643,20.0,data-portal,246154,membrane,false,10065/dga2016-01-13-32/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134519,246154
+4643,20.0,data-portal,246158,intermembrane-space,false,10065/dga2016-01-13-32/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134521,246158
+4643,20.0,data-portal,246156,inclusion,false,10065/dga2016-01-13-32/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134520,246156
+4643,20.0,data-portal,246152,cytosole,false,10065/dga2016-01-13-32/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134518,246152
+6973,20.0,data-portal,246032,intermembrane-space,false,10098/dga2015-10-29-31/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134458,246032
+6973,20.0,data-portal,246030,inclusion,false,10098/dga2015-10-29-31/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134457,246030
+6973,20.0,data-portal,246028,membrane,false,10098/dga2015-10-29-31/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134456,246028
+6973,20.0,data-portal,246026,cytosole,false,10098/dga2015-10-29-31/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134455,246026
+6951,20.0,data-portal,246020,membrane,false,10098/dga2015-10-29-11/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134452,246020
+6951,20.0,data-portal,246024,intermembrane-space,false,10098/dga2015-10-29-11/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134454,246024
+6951,20.0,data-portal,246018,cytosole,false,10098/dga2015-10-29-11/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134451,246018
+6951,20.0,data-portal,246022,inclusion,false,10098/dga2015-10-29-11/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134453,246022
+6980,20.0,data-portal,246036,membrane,false,10098/dga2015-10-29-39/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134460,246036
+6980,20.0,data-portal,246040,intermembrane-space,false,10098/dga2015-10-29-39/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134462,246040
+6980,20.0,data-portal,246034,cytosole,false,10098/dga2015-10-29-39/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134459,246034
+6980,20.0,data-portal,246038,inclusion,false,10098/dga2015-10-29-39/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134461,246038
+6985,20.0,data-portal,246048,intermembrane-space,false,10098/dga2015-10-29-43/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134466,246048
+6985,20.0,data-portal,246042,cytosole,false,10098/dga2015-10-29-43/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134463,246042
+6985,20.0,data-portal,246044,membrane,false,10098/dga2015-10-29-43/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134464,246044
+6985,20.0,data-portal,246046,inclusion,false,10098/dga2015-10-29-43/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134465,246046
+7004,20.0,data-portal,246054,inclusion,false,10098/dga2015-10-29-60/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134469,246054
+7004,20.0,data-portal,246050,cytosole,false,10098/dga2015-10-29-60/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134467,246050
+7004,20.0,data-portal,246052,membrane,false,10098/dga2015-10-29-60/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134468,246052
+7004,20.0,data-portal,246056,intermembrane-space,false,10098/dga2015-10-29-60/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134470,246056
+8047,20.0,data-portal,245784,flagellum,false,10155/ycw2013-08-20-43/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134334,245784
+8047,20.0,data-portal,245786,membrane,false,10155/ycw2013-08-20-43/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134335,245786
+8047,20.0,data-portal,245788,intermembrane-space,false,10155/ycw2013-08-20-43/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134336,245788
+8047,20.0,data-portal,245782,cytosole,false,10155/ycw2013-08-20-43/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134333,245782
+8049,20.0,data-portal,245798,intermembrane-space,false,10155/ycw2013-08-20-45/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134341,245798
+8049,20.0,data-portal,245796,inclusion,false,10155/ycw2013-08-20-45/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134340,245796
+8049,20.0,data-portal,245794,membrane,false,10155/ycw2013-08-20-45/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134339,245794
+8049,20.0,data-portal,245792,flagellum,false,10155/ycw2013-08-20-45/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134338,245792
+8049,20.0,data-portal,245790,cytosole,false,10155/ycw2013-08-20-45/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134337,245790
+8017,20.0,data-portal,245756,flagellum,false,10155/ycw2013-05-01-34/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134320,245756
+8017,20.0,data-portal,245754,cytosole,false,10155/ycw2013-05-01-34/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134319,245754
+8017,20.0,data-portal,245760,intermembrane-space,false,10155/ycw2013-05-01-34/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134322,245760
+8017,20.0,data-portal,245758,membrane,false,10155/ycw2013-05-01-34/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134321,245758
+8067,20.0,data-portal,245822,membrane,false,10155/ycw2013-09-10-36/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134353,245822
+8067,20.0,data-portal,245826,intermembrane-space,false,10155/ycw2013-09-10-36/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134355,245826
+8067,20.0,data-portal,245824,inclusion,false,10155/ycw2013-09-10-36/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134354,245824
+8067,20.0,data-portal,245820,cytosole,false,10155/ycw2013-09-10-36/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134352,245820
+8063,20.0,data-portal,245810,cytosole,false,10155/ycw2013-09-10-28/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134347,245810
+8063,20.0,data-portal,245814,membrane,false,10155/ycw2013-09-10-28/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134349,245814
+8063,20.0,data-portal,245816,inclusion,false,10155/ycw2013-09-10-28/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134350,245816
+8063,20.0,data-portal,245818,intermembrane-space,false,10155/ycw2013-09-10-28/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134351,245818
+8063,20.0,data-portal,245812,flagellum,false,10155/ycw2013-09-10-28/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134348,245812
+8070,20.0,data-portal,245830,flagellum,false,10155/ycw2013-09-10-39/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134357,245830
+8070,20.0,data-portal,245834,intermembrane-space,false,10155/ycw2013-09-10-39/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134359,245834
+8070,20.0,data-portal,245828,cytosole,false,10155/ycw2013-09-10-39/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134356,245828
+8070,20.0,data-portal,245832,membrane,false,10155/ycw2013-09-10-39/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134358,245832
+8074,20.0,data-portal,245838,flagellum,false,10155/ycw2013-09-10-43/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134361,245838
+8074,20.0,data-portal,245836,cytosole,false,10155/ycw2013-09-10-43/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134360,245836
+8074,20.0,data-portal,245840,membrane,false,10155/ycw2013-09-10-43/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134362,245840
+8074,20.0,data-portal,245844,intermembrane-space,false,10155/ycw2013-09-10-43/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134364,245844
+8074,20.0,data-portal,245842,inclusion,false,10155/ycw2013-09-10-43/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134363,245842
+8034,20.0,data-portal,245766,membrane,false,10155/ycw2013-08-20-24/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134325,245766
+8034,20.0,data-portal,245762,cytosole,false,10155/ycw2013-08-20-24/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134323,245762
+8034,20.0,data-portal,245768,inclusion,false,10155/ycw2013-08-20-24/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134326,245768
+8034,20.0,data-portal,245764,flagellum,false,10155/ycw2013-08-20-24/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134324,245764
+8034,20.0,data-portal,245770,intermembrane-space,false,10155/ycw2013-08-20-24/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134327,245770
+8038,20.0,data-portal,245776,membrane,false,10155/ycw2013-08-20-28/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134330,245776
+8038,20.0,data-portal,245778,inclusion,false,10155/ycw2013-08-20-28/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134331,245778
+8038,20.0,data-portal,245772,cytosole,false,10155/ycw2013-08-20-28/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134328,245772
+8038,20.0,data-portal,245774,flagellum,false,10155/ycw2013-08-20-28/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134329,245774
+8038,20.0,data-portal,245780,intermembrane-space,false,10155/ycw2013-08-20-28/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134332,245780
+8057,20.0,data-portal,245804,membrane,false,10155/ycw2013-08-20-59/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134344,245804
+8057,20.0,data-portal,245806,inclusion,false,10155/ycw2013-08-20-59/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134345,245806
+8057,20.0,data-portal,245802,flagellum,false,10155/ycw2013-08-20-59/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134343,245802
+8057,20.0,data-portal,245800,cytosole,false,10155/ycw2013-08-20-59/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134342,245800
+8057,20.0,data-portal,245808,intermembrane-space,false,10155/ycw2013-08-20-59/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134346,245808
+8078,20.0,data-portal,245854,intermembrane-space,false,10155/ycw2013-09-10-47/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134369,245854
+8078,20.0,data-portal,245852,inclusion,false,10155/ycw2013-09-10-47/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134368,245852
+8078,20.0,data-portal,245848,flagellum,false,10155/ycw2013-09-10-47/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134366,245848
+8078,20.0,data-portal,245846,cytosole,false,10155/ycw2013-09-10-47/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134365,245846
+8078,20.0,data-portal,245850,membrane,false,10155/ycw2013-09-10-47/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134367,245850
+8079,20.0,data-portal,245864,intermembrane-space,false,10155/ycw2013-09-10-48/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134374,245864
+8079,20.0,data-portal,245856,cytosole,false,10155/ycw2013-09-10-48/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134370,245856
+8079,20.0,data-portal,245858,flagellum,false,10155/ycw2013-09-10-48/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134371,245858
+8079,20.0,data-portal,245862,inclusion,false,10155/ycw2013-09-10-48/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134373,245862
+8079,20.0,data-portal,245860,membrane,false,10155/ycw2013-09-10-48/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134372,245860
+7981,20.0,data-portal,245732,intermembrane-space,false,10155/ycw2012-11-14-20/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134308,245732
+7981,20.0,data-portal,245726,flagellum,false,10155/ycw2012-11-14-20/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134305,245726
+7981,20.0,data-portal,245730,inclusion,false,10155/ycw2012-11-14-20/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134307,245730
+7981,20.0,data-portal,245724,cytosole,false,10155/ycw2012-11-14-20/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134304,245724
+7981,20.0,data-portal,245728,membrane,false,10155/ycw2012-11-14-20/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134306,245728
+7996,20.0,data-portal,245742,intermembrane-space,false,10155/ycw2012-11-14-47/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134313,245742
+7996,20.0,data-portal,245734,cytosole,false,10155/ycw2012-11-14-47/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134309,245734
+7996,20.0,data-portal,245740,inclusion,false,10155/ycw2012-11-14-47/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134312,245740
+7996,20.0,data-portal,245738,membrane,false,10155/ycw2012-11-14-47/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134311,245738
+7996,20.0,data-portal,245736,flagellum,false,10155/ycw2012-11-14-47/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134310,245736
+8004,20.0,data-portal,245750,inclusion,false,10155/ycw2012-11-14-59/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134317,245750
+8004,20.0,data-portal,245752,intermembrane-space,false,10155/ycw2012-11-14-59/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134318,245752
+8004,20.0,data-portal,245744,cytosole,false,10155/ycw2012-11-14-59/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134314,245744
+8004,20.0,data-portal,245748,membrane,false,10155/ycw2012-11-14-59/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134316,245748
+8004,20.0,data-portal,245746,flagellum,false,10155/ycw2012-11-14-59/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134315,245746
+8417,20.0,data-portal,246206,intermembrane-space,false,10161/ycw2012-09-23-66/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134545,246206
+8417,20.0,data-portal,246204,membrane,false,10161/ycw2012-09-23-66/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134544,246204
+8417,20.0,data-portal,246200,cytosole,false,10161/ycw2012-09-23-66/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134542,246200
+8417,20.0,data-portal,246202,flagellum,false,10161/ycw2012-09-23-66/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134543,246202
+8418,20.0,data-portal,246208,cytosole,false,10161/ycw2012-09-23-67/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134546,246208
+8418,20.0,data-portal,246214,intermembrane-space,false,10161/ycw2012-09-23-67/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134549,246214
+8418,20.0,data-portal,246212,membrane,false,10161/ycw2012-09-23-67/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134548,246212
+8418,20.0,data-portal,246210,flagellum,false,10161/ycw2012-09-23-67/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134547,246210
+8421,20.0,data-portal,246216,cytosole,false,10161/ycw2012-09-23-70/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134550,246216
+8421,20.0,data-portal,246222,intermembrane-space,false,10161/ycw2012-09-23-70/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134553,246222
+8421,20.0,data-portal,246220,membrane,false,10161/ycw2012-09-23-70/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134552,246220
+8421,20.0,data-portal,246218,flagellum,false,10161/ycw2012-09-23-70/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134551,246218
+8379,20.0,data-portal,246162,flagellum,false,10161/ycw2012-09-23-21/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134523,246162
+8379,20.0,data-portal,246166,intermembrane-space,false,10161/ycw2012-09-23-21/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134525,246166
+8379,20.0,data-portal,246164,membrane,false,10161/ycw2012-09-23-21/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134524,246164
+8379,20.0,data-portal,246160,cytosole,false,10161/ycw2012-09-23-21/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134522,246160
+8389,20.0,data-portal,246174,intermembrane-space,false,10161/ycw2012-09-23-31/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134529,246174
+8389,20.0,data-portal,246168,cytosole,false,10161/ycw2012-09-23-31/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134526,246168
+8389,20.0,data-portal,246170,flagellum,false,10161/ycw2012-09-23-31/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134527,246170
+8389,20.0,data-portal,246172,membrane,false,10161/ycw2012-09-23-31/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134528,246172
+8403,20.0,data-portal,246190,intermembrane-space,false,10161/ycw2012-09-23-46/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134537,246190
+8403,20.0,data-portal,246186,flagellum,false,10161/ycw2012-09-23-46/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134535,246186
+8403,20.0,data-portal,246184,cytosole,false,10161/ycw2012-09-23-46/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134534,246184
+8403,20.0,data-portal,246188,membrane,false,10161/ycw2012-09-23-46/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134536,246188
+8411,20.0,data-portal,246194,flagellum,false,10161/ycw2012-09-23-55/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134539,246194
+8411,20.0,data-portal,246196,membrane,false,10161/ycw2012-09-23-55/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134540,246196
+8411,20.0,data-portal,246192,cytosole,false,10161/ycw2012-09-23-55/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134538,246192
+8411,20.0,data-portal,246198,intermembrane-space,false,10161/ycw2012-09-23-55/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134541,246198
+8397,20.0,data-portal,246178,flagellum,false,10161/ycw2012-09-23-39/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134531,246178
+8397,20.0,data-portal,246180,membrane,false,10161/ycw2012-09-23-39/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134532,246180
+8397,20.0,data-portal,246182,intermembrane-space,false,10161/ycw2012-09-23-39/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134533,246182
+8397,20.0,data-portal,246176,cytosole,false,10161/ycw2012-09-23-39/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134530,246176
+8425,20.0,data-portal,246012,cytosole,false,10162/ycw2012-03-12-3/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134448,246012
+8425,20.0,data-portal,246014,membrane,false,10162/ycw2012-03-12-3/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134449,246014
+8425,20.0,data-portal,246016,intermembrane-space,false,10162/ycw2012-03-12-3/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134450,246016
+8448,20.0,data-portal,245884,intermembrane-space,false,10163/ycw2012-03-12-18/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134384,245884
+8448,20.0,data-portal,245882,membrane,false,10163/ycw2012-03-12-18/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134383,245882
+8448,20.0,data-portal,245880,cytosole,false,10163/ycw2012-03-12-18/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134382,245880
+8432,20.0,data-portal,245872,intermembrane-space,false,10163/ycw2012-03-03-2/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134378,245872
+8432,20.0,data-portal,245870,inclusion,false,10163/ycw2012-03-03-2/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134377,245870
+8432,20.0,data-portal,245868,membrane,false,10163/ycw2012-03-03-2/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134376,245868
+8432,20.0,data-portal,245866,cytosole,false,10163/ycw2012-03-03-2/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134375,245866
+8436,20.0,data-portal,245874,cytosole,false,10163/ycw2012-03-03-3/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134379,245874
+8436,20.0,data-portal,245876,membrane,false,10163/ycw2012-03-03-3/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134380,245876
+8436,20.0,data-portal,245878,intermembrane-space,false,10163/ycw2012-03-03-3/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134381,245878
+8455,20.0,data-portal,245888,membrane,false,10163/ycw2012-03-12-7/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134386,245888
+8455,20.0,data-portal,245886,cytosole,false,10163/ycw2012-03-12-7/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134385,245886
+8455,20.0,data-portal,245890,intermembrane-space,false,10163/ycw2012-03-12-7/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134387,245890
+8499,20.0,data-portal,245898,cytosole,false,10166/ycw2012-09-07-3/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134391,245898
+8499,20.0,data-portal,245902,intermembrane-space,false,10166/ycw2012-09-07-3/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134393,245902
+8499,20.0,data-portal,245900,membrane,false,10166/ycw2012-09-07-3/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134392,245900
+8494,20.0,data-portal,245892,cytosole,false,10166/ycw2012-09-07-23/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134388,245892
+8494,20.0,data-portal,245894,membrane,false,10166/ycw2012-09-07-23/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134389,245894
+8494,20.0,data-portal,245896,intermembrane-space,false,10166/ycw2012-09-07-23/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134390,245896
+8507,20.0,data-portal,245908,intermembrane-space,false,10166/ycw2012-10-08-1/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134396,245908
+8507,20.0,data-portal,245904,cytosole,false,10166/ycw2012-10-08-1/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134394,245904
+8507,20.0,data-portal,245906,membrane,false,10166/ycw2012-10-08-1/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134395,245906
+8513,20.0,data-portal,245910,cytosole,false,10166/ycw2012-10-08-7/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134397,245910
+8513,20.0,data-portal,245914,intermembrane-space,false,10166/ycw2012-10-08-7/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134399,245914
+8513,20.0,data-portal,245912,membrane,false,10166/ycw2012-10-08-7/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134398,245912
+10264,20.0,data-portal,245668,cytosole,false,10226/mba2011-11-23-20/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134276,245668
+10264,20.0,data-portal,245674,intermembrane-space,false,10226/mba2011-11-23-20/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134279,245674
+10264,20.0,data-portal,245672,membrane,false,10226/mba2011-11-23-20/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134278,245672
+10264,20.0,data-portal,245670,flagellum,false,10226/mba2011-11-23-20/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134277,245670
+10265,20.0,data-portal,245678,flagellum,false,10226/mba2011-11-23-21/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134281,245678
+10265,20.0,data-portal,245680,membrane,false,10226/mba2011-11-23-21/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134282,245680
+10265,20.0,data-portal,245676,cytosole,false,10226/mba2011-11-23-21/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134280,245676
+10265,20.0,data-portal,245682,intermembrane-space,false,10226/mba2011-11-23-21/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134283,245682
+10266,20.0,data-portal,245688,membrane,false,10226/mba2011-11-23-22/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134286,245688
+10266,20.0,data-portal,245690,intermembrane-space,false,10226/mba2011-11-23-22/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134287,245690
+10266,20.0,data-portal,245686,flagellum,false,10226/mba2011-11-23-22/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134285,245686
+10266,20.0,data-portal,245684,cytosole,false,10226/mba2011-11-23-22/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134284,245684
+10269,20.0,data-portal,245696,membrane,false,10226/mba2011-11-23-25/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134290,245696
+10269,20.0,data-portal,245694,flagellum,false,10226/mba2011-11-23-25/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134289,245694
+10269,20.0,data-portal,245698,intermembrane-space,false,10226/mba2011-11-23-25/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134291,245698
+10269,20.0,data-portal,245692,cytosole,false,10226/mba2011-11-23-25/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134288,245692
+10270,20.0,data-portal,245700,cytosole,false,10226/mba2011-11-23-26/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134292,245700
+10270,20.0,data-portal,245704,membrane,false,10226/mba2011-11-23-26/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134294,245704
+10270,20.0,data-portal,245706,intermembrane-space,false,10226/mba2011-11-23-26/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134295,245706
+10270,20.0,data-portal,245702,flagellum,false,10226/mba2011-11-23-26/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134293,245702
+10252,20.0,data-portal,245648,membrane,false,10226/mba2011-11-23-1/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134266,245648
+10252,20.0,data-portal,245644,cytosole,false,10226/mba2011-11-23-1/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134264,245644
+10252,20.0,data-portal,245646,flagellum,false,10226/mba2011-11-23-1/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134265,245646
+10252,20.0,data-portal,245650,intermembrane-space,false,10226/mba2011-11-23-1/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134267,245650
+10258,20.0,data-portal,245656,membrane,false,10226/mba2011-11-23-15/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134270,245656
+10258,20.0,data-portal,245654,flagellum,false,10226/mba2011-11-23-15/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134269,245654
+10258,20.0,data-portal,245658,intermembrane-space,false,10226/mba2011-11-23-15/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134271,245658
+10258,20.0,data-portal,245652,cytosole,false,10226/mba2011-11-23-15/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134268,245652
+10259,20.0,data-portal,245662,flagellum,false,10226/mba2011-11-23-16/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134273,245662
+10259,20.0,data-portal,245664,membrane,false,10226/mba2011-11-23-16/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134274,245664
+10259,20.0,data-portal,245660,cytosole,false,10226/mba2011-11-23-16/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134272,245660
+10259,20.0,data-portal,245666,intermembrane-space,false,10226/mba2011-11-23-16/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134275,245666
+10280,20.0,data-portal,245714,intermembrane-space,false,10226/mba2011-11-23-35/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134299,245714
+10280,20.0,data-portal,245712,membrane,false,10226/mba2011-11-23-35/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134298,245712
+10280,20.0,data-portal,245708,cytosole,false,10226/mba2011-11-23-35/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134296,245708
+10280,20.0,data-portal,245710,flagellum,false,10226/mba2011-11-23-35/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134297,245710
+10285,20.0,data-portal,245716,cytosole,false,10226/mba2011-11-23-7/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134300,245716
+10285,20.0,data-portal,245718,flagellum,false,10226/mba2011-11-23-7/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134301,245718
+10285,20.0,data-portal,245720,membrane,false,10226/mba2011-11-23-7/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134302,245720
+10285,20.0,data-portal,245722,intermembrane-space,false,10226/mba2011-11-23-7/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134303,245722
+11792,20.0,data-portal,246086,cytosole,false,10272/aba2015-06-04-26/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134485,246086
+11792,20.0,data-portal,246088,membrane,false,10272/aba2015-06-04-26/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134486,246088
+11792,20.0,data-portal,246090,intermembrane-space,false,10272/aba2015-06-04-26/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134487,246090
+11788,20.0,data-portal,246074,membrane,false,10272/aba2015-06-04-22/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134479,246074
+11788,20.0,data-portal,246072,cytosole,false,10272/aba2015-06-04-22/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134478,246072
+11788,20.0,data-portal,246078,intermembrane-space,false,10272/aba2015-06-04-22/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134481,246078
+11788,20.0,data-portal,246076,inclusion,false,10272/aba2015-06-04-22/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134480,246076
+11790,20.0,data-portal,246082,membrane,false,10272/aba2015-06-04-24/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134483,246082
+11790,20.0,data-portal,246080,cytosole,false,10272/aba2015-06-04-24/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134482,246080
+11790,20.0,data-portal,246084,intermembrane-space,false,10272/aba2015-06-04-24/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134484,246084
+11803,20.0,data-portal,246110,intermembrane-space,false,10272/aba2015-06-04-9/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134497,246110
+11803,20.0,data-portal,246108,membrane,false,10272/aba2015-06-04-9/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134496,246108
+11803,20.0,data-portal,246106,cytosole,false,10272/aba2015-06-04-9/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134495,246106
+11776,20.0,data-portal,246058,cytosole,false,10272/aba2015-06-04-10/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134471,246058
+11776,20.0,data-portal,246062,membrane,false,10272/aba2015-06-04-10/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134473,246062
+11776,20.0,data-portal,246064,intermembrane-space,false,10272/aba2015-06-04-10/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134474,246064
+11776,20.0,data-portal,246060,flagellum,false,10272/aba2015-06-04-10/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134472,246060
+11782,20.0,data-portal,246066,cytosole,false,10272/aba2015-06-04-16/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134475,246066
+11782,20.0,data-portal,246070,intermembrane-space,false,10272/aba2015-06-04-16/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134477,246070
+11782,20.0,data-portal,246068,membrane,false,10272/aba2015-06-04-16/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134476,246068
+11796,20.0,data-portal,246092,cytosole,false,10272/aba2015-06-04-30/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134488,246092
+11796,20.0,data-portal,246096,intermembrane-space,false,10272/aba2015-06-04-30/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134490,246096
+11796,20.0,data-portal,246094,membrane,false,10272/aba2015-06-04-30/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134489,246094
+11799,20.0,data-portal,246104,intermembrane-space,false,10272/aba2015-06-04-5/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134494,246104
+11799,20.0,data-portal,246098,cytosole,false,10272/aba2015-06-04-5/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134491,246098
+11799,20.0,data-portal,246100,membrane,false,10272/aba2015-06-04-5/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134492,246100
+11799,20.0,data-portal,246102,inclusion,false,10272/aba2015-06-04-5/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134493,246102
+11804,20.0,data-portal,246000,inclusion,false,10273/aba2015-07-07-10/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134442,246000
+11804,20.0,data-portal,246002,intermembrane-space,false,10273/aba2015-07-07-10/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134443,246002
+11804,20.0,data-portal,245996,cytosole,false,10273/aba2015-07-07-10/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134440,245996
+11804,20.0,data-portal,245998,membrane,false,10273/aba2015-07-07-10/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134441,245998
+11811,20.0,data-portal,246004,cytosole,false,10273/aba2015-07-07-17/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134444,246004
+11811,20.0,data-portal,246006,flagellum,false,10273/aba2015-07-07-17/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134445,246006
+11811,20.0,data-portal,246010,intermembrane-space,false,10273/aba2015-07-07-17/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134447,246010
+11811,20.0,data-portal,246008,membrane,false,10273/aba2015-07-07-17/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134446,246008
+13208,20.0,data-portal,245994,intermembrane-space,false,10281/aba2015-02-23-9/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134439,245994
+13208,20.0,data-portal,245986,cytosole,false,10281/aba2015-02-23-9/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134435,245986
+13208,20.0,data-portal,245992,inclusion,false,10281/aba2015-02-23-9/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134438,245992
+13208,20.0,data-portal,245990,membrane,false,10281/aba2015-02-23-9/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134437,245990
+13208,20.0,data-portal,245988,flagellum,false,10281/aba2015-02-23-9/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134436,245988
+13184,20.0,data-portal,245938,inclusion,false,10281/aba2015-02-23-2/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134411,245938
+13184,20.0,data-portal,245934,flagellum,false,10281/aba2015-02-23-2/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134409,245934
+13184,20.0,data-portal,245940,intermembrane-space,false,10281/aba2015-02-23-2/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134412,245940
+13184,20.0,data-portal,245936,membrane,false,10281/aba2015-02-23-2/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134410,245936
+13184,20.0,data-portal,245932,cytosole,false,10281/aba2015-02-23-2/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134408,245932
+13180,20.0,data-portal,245920,inclusion,false,10281/aba2015-02-23-15/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134402,245920
+13180,20.0,data-portal,245918,membrane,false,10281/aba2015-02-23-15/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134401,245918
+13180,20.0,data-portal,245922,intermembrane-space,false,10281/aba2015-02-23-15/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134403,245922
+13180,20.0,data-portal,245916,cytosole,false,10281/aba2015-02-23-15/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134400,245916
+13181,20.0,data-portal,245928,inclusion,false,10281/aba2015-02-23-16/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134406,245928
+13181,20.0,data-portal,245926,membrane,false,10281/aba2015-02-23-16/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134405,245926
+13181,20.0,data-portal,245924,cytosole,false,10281/aba2015-02-23-16/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134404,245924
+13181,20.0,data-portal,245930,intermembrane-space,false,10281/aba2015-02-23-16/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134407,245930
+13185,20.0,data-portal,245944,flagellum,false,10281/aba2015-02-23-20/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134414,245944
+13185,20.0,data-portal,245950,intermembrane-space,false,10281/aba2015-02-23-20/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134417,245950
+13185,20.0,data-portal,245942,cytosole,false,10281/aba2015-02-23-20/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134413,245942
+13185,20.0,data-portal,245948,inclusion,false,10281/aba2015-02-23-20/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134416,245948
+13185,20.0,data-portal,245946,membrane,false,10281/aba2015-02-23-20/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134415,245946
+13186,20.0,data-portal,245952,cytosole,false,10281/aba2015-02-23-21/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134418,245952
+13186,20.0,data-portal,245954,membrane,false,10281/aba2015-02-23-21/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134419,245954
+13186,20.0,data-portal,245958,intermembrane-space,false,10281/aba2015-02-23-21/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134421,245958
+13186,20.0,data-portal,245956,inclusion,false,10281/aba2015-02-23-21/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134420,245956
+13195,20.0,data-portal,245968,cytosole,false,10281/aba2015-02-23-3/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134426,245968
+13195,20.0,data-portal,245972,membrane,false,10281/aba2015-02-23-3/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134428,245972
+13195,20.0,data-portal,245970,flagellum,false,10281/aba2015-02-23-3/Reconstructions/VoxelSpacing20.000/Annotations/101/bacterial_type_flagellum-1.0_segmentationmask.zarr,bacterial-type flagellum,,134427,245970
+13195,20.0,data-portal,245974,inclusion,false,10281/aba2015-02-23-3/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134429,245974
+13195,20.0,data-portal,245976,intermembrane-space,false,10281/aba2015-02-23-3/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134430,245976
+13196,20.0,data-portal,245984,intermembrane-space,false,10281/aba2015-02-23-30/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134434,245984
+13196,20.0,data-portal,245982,inclusion,false,10281/aba2015-02-23-30/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134433,245982
+13196,20.0,data-portal,245980,membrane,false,10281/aba2015-02-23-30/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134432,245980
+13196,20.0,data-portal,245978,cytosole,false,10281/aba2015-02-23-30/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134431,245978
+13190,20.0,data-portal,245966,intermembrane-space,false,10281/aba2015-02-23-25/Reconstructions/VoxelSpacing20.000/Annotations/104/periplasmic_space-1.0_segmentationmask.zarr,periplasmic space,,134425,245966
+13190,20.0,data-portal,245960,cytosole,false,10281/aba2015-02-23-25/Reconstructions/VoxelSpacing20.000/Annotations/100/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134422,245960
+13190,20.0,data-portal,245964,inclusion,false,10281/aba2015-02-23-25/Reconstructions/VoxelSpacing20.000/Annotations/103/dense_body-1.0_segmentationmask.zarr,dense body,,134424,245964
+13190,20.0,data-portal,245962,membrane,false,10281/aba2015-02-23-25/Reconstructions/VoxelSpacing20.000/Annotations/102/membrane-1.0_segmentationmask.zarr,membrane,,134423,245962

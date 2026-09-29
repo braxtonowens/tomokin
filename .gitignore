@@ -1,0 +1,12 @@
+# data, features, outputs and model caches are never committed
+data/*
+!data/popsicle_hf/
+outputs/
+.hf_cache/
+.torch_cache/
+.venv*/
+__pycache__/
+*.pyc
+webapp/frontend/node_modules/
+*.map
+.DS_Store

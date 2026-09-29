@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>radio_tomo viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>radio_tomo viewer</h1>
+    <select id="tomo" aria-label="tomogram"></select>
+    <span id="info" class="muted"></span>
+  </header>
+
+  <main>
+    <section id="viewer" class="viewer" tabindex="0" aria-label="tomogram slice">
+      <canvas id="canvas"></canvas>
+      <div id="hud" class="hud"></div>
+    </section>
+
+    <aside class="side">
+      <section>
+        <h2>Slice</h2>
+        <div class="row">
+          <input id="zslider" type="range" min="0" max="0" value="0" aria-label="slice">
+          <input id="znum" type="number" min="0" value="0" aria-label="slice number">
+        </div>
+        <div id="ztag" class="muted small"></div>
+        <p class="hint">↑/↓ one slice · Shift ±10 · Home/End · A add · O overlay · wheel zoom · drag pan · double-click fit</p>
+      </section>
+
+      <section>
+        <h2>Display</h2>
+        <label class="row">contrast min <input id="cmin" type="range" min="0" max="255" value="20"></label>
+        <label class="row">contrast max <input id="cmax" type="range" min="0" max="255" value="235"></label>
+        <label class="row"><input id="ovshow" type="checkbox" checked> processed PCA-RGB overlay</label>
+        <label class="row">opacity <input id="ovalpha" type="range" min="0" max="100" value="60"></label>
+        <div id="ovtag" class="muted small"></div>
+      </section>
+
+      <section class="embed">
+        <h2>C-RADIO embedding</h2>
+        <p class="muted small">gray-8 slab · RC template (12 refs) · native res · shared 256-PC basis · gaps ≤ 4 interpolated</p>
+        <button id="addcur">Add current slice (A)</button>
+        <div class="range">
+          <label>from <input id="rfrom" type="number" min="0" value="0"></label>
+          <label>to <input id="rto" type="number" min="0" value="0"></label>
+          <label>every <input id="revery" type="number" min="1" value="2"></label>
+          <button id="addrange">Add range</button>
+        </div>
+        <ul id="zlist" class="zlist"></ul>
+        <div class="row">
+          <button id="clear">Clear pending</button>
+          <button id="embed" class="primary">Embed selected</button>
+        </div>
+        <progress id="prog" max="1" value="0"></progress>
+        <div id="jobmsg" class="muted small"></div>
+      </section>
+    </aside>
+
+    <section class="scores">
+      <div class="chart"><div class="ctitle">torch-slicepick score <span id="stag" class="muted"></span></div><svg id="plotscore"></svg></div>
+      <div class="chart"><div class="ctitle">components</div><svg id="plotcomp"></svg></div>
+    </section>
+  </main>
+  <script src="dist/main.js"></script>
+</body>
+</html>

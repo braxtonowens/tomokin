@@ -1,0 +1,81 @@
+run,voxel_size,user_id,session_id,name,is_multilabel,url,portal_object_name,portal_session_id,portal_annotation_id,portal_annotation_file_id
+249,13.48,data-portal,246334,nuclear-envelope,false,10000/TS_043/Reconstructions/VoxelSpacing13.480/Annotations/116/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134609,246334
+249,13.48,data-portal,246338,membrane-tubule,false,10000/TS_043/Reconstructions/VoxelSpacing13.480/Annotations/118/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134611,246338
+249,13.48,data-portal,246336,vesicle,false,10000/TS_043/Reconstructions/VoxelSpacing13.480/Annotations/117/vesicle-1.0_segmentationmask.zarr,vesicle,,134610,246336
+249,13.48,data-portal,246330,cytoplasm,false,10000/TS_043/Reconstructions/VoxelSpacing13.480/Annotations/114/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134607,246330
+249,13.48,data-portal,246332,nucleus,false,10000/TS_043/Reconstructions/VoxelSpacing13.480/Annotations/115/nucleus-1.0_segmentationmask.zarr,nucleus,,134608,246332
+241,13.48,data-portal,246272,cytoplasm,false,10000/TS_026/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134578,246272
+241,13.48,data-portal,246276,membrane-tubule,false,10000/TS_026/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134580,246276
+241,13.48,data-portal,246274,vesicle,false,10000/TS_026/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134579,246274
+242,13.48,data-portal,246282,nuclear-envelope,false,10000/TS_027/Reconstructions/VoxelSpacing13.480/Annotations/116/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134583,246282
+242,13.48,data-portal,246280,nucleus,false,10000/TS_027/Reconstructions/VoxelSpacing13.480/Annotations/115/nucleus-1.0_segmentationmask.zarr,nucleus,,134582,246280
+242,13.48,data-portal,246278,cytoplasm,false,10000/TS_027/Reconstructions/VoxelSpacing13.480/Annotations/114/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134581,246278
+242,13.48,data-portal,246286,membrane-tubule,false,10000/TS_027/Reconstructions/VoxelSpacing13.480/Annotations/118/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134585,246286
+242,13.48,data-portal,246284,vesicle,false,10000/TS_027/Reconstructions/VoxelSpacing13.480/Annotations/117/vesicle-1.0_segmentationmask.zarr,vesicle,,134584,246284
+243,13.48,data-portal,246290,vesicle,false,10000/TS_028/Reconstructions/VoxelSpacing13.480/Annotations/118/vesicle-1.0_segmentationmask.zarr,vesicle,,134587,246290
+243,13.48,data-portal,246288,cytoplasm,false,10000/TS_028/Reconstructions/VoxelSpacing13.480/Annotations/115/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134586,246288
+243,13.48,data-portal,246292,membrane-tubule,false,10000/TS_028/Reconstructions/VoxelSpacing13.480/Annotations/119/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134588,246292
+244,13.48,data-portal,246300,mitochondrion,false,10000/TS_029/Reconstructions/VoxelSpacing13.480/Annotations/117/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134592,246300
+244,13.48,data-portal,246298,membrane-tubule,false,10000/TS_029/Reconstructions/VoxelSpacing13.480/Annotations/116/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134591,246298
+244,13.48,data-portal,246296,vesicle,false,10000/TS_029/Reconstructions/VoxelSpacing13.480/Annotations/115/vesicle-1.0_segmentationmask.zarr,vesicle,,134590,246296
+244,13.48,data-portal,246294,cytoplasm,false,10000/TS_029/Reconstructions/VoxelSpacing13.480/Annotations/112/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134589,246294
+245,13.48,data-portal,246302,cytoplasm,false,10000/TS_030/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134593,246302
+245,13.48,data-portal,246306,membrane-tubule,false,10000/TS_030/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134595,246306
+245,13.48,data-portal,246304,vesicle,false,10000/TS_030/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134594,246304
+246,13.48,data-portal,246314,mitochondrion,false,10000/TS_034/Reconstructions/VoxelSpacing13.480/Annotations/122/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134599,246314
+246,13.48,data-portal,246312,membrane-tubule,false,10000/TS_034/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134598,246312
+246,13.48,data-portal,246308,cytoplasm,false,10000/TS_034/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134596,246308
+246,13.48,data-portal,246310,vesicle,false,10000/TS_034/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134597,246310
+247,13.48,data-portal,246316,cytoplasm,false,10000/TS_037/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134600,246316
+247,13.48,data-portal,246322,vesicle,false,10000/TS_037/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134603,246322
+247,13.48,data-portal,246320,nuclear-envelope,false,10000/TS_037/Reconstructions/VoxelSpacing13.480/Annotations/119/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134602,246320
+247,13.48,data-portal,246318,nucleus,false,10000/TS_037/Reconstructions/VoxelSpacing13.480/Annotations/118/nucleus-1.0_segmentationmask.zarr,nucleus,,134601,246318
+248,13.48,data-portal,246324,cytoplasm,false,10000/TS_041/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134604,246324
+248,13.48,data-portal,246326,vesicle,false,10000/TS_041/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134605,246326
+248,13.48,data-portal,246328,membrane-tubule,false,10000/TS_041/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134606,246328
+250,13.48,data-portal,246344,nuclear-envelope,false,10000/TS_045/Reconstructions/VoxelSpacing13.480/Annotations/116/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134614,246344
+250,13.48,data-portal,246348,membrane-tubule,false,10000/TS_045/Reconstructions/VoxelSpacing13.480/Annotations/118/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134616,246348
+250,13.48,data-portal,246340,cytoplasm,false,10000/TS_045/Reconstructions/VoxelSpacing13.480/Annotations/114/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134612,246340
+250,13.48,data-portal,246346,vesicle,false,10000/TS_045/Reconstructions/VoxelSpacing13.480/Annotations/117/vesicle-1.0_segmentationmask.zarr,vesicle,,134615,246346
+250,13.48,data-portal,246350,mitochondrion,false,10000/TS_045/Reconstructions/VoxelSpacing13.480/Annotations/119/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134617,246350
+250,13.48,data-portal,246342,nucleus,false,10000/TS_045/Reconstructions/VoxelSpacing13.480/Annotations/115/nucleus-1.0_segmentationmask.zarr,nucleus,,134613,246342
+253,13.48,data-portal,246376,mitochondrion,false,10001/TS_0003/Reconstructions/VoxelSpacing13.480/Annotations/122/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134630,246376
+253,13.48,data-portal,246372,vesicle,false,10001/TS_0003/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134628,246372
+253,13.48,data-portal,246374,membrane-tubule,false,10001/TS_0003/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134629,246374
+253,13.48,data-portal,246370,cytoplasm,false,10001/TS_0003/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134627,246370
+252,13.48,data-portal,246360,cytoplasm,false,10001/TS_0002/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134622,246360
+252,13.48,data-portal,246366,vesicle,false,10001/TS_0002/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134625,246366
+252,13.48,data-portal,246362,nucleus,false,10001/TS_0002/Reconstructions/VoxelSpacing13.480/Annotations/118/nucleus-1.0_segmentationmask.zarr,nucleus,,134623,246362
+252,13.48,data-portal,246364,nuclear-envelope,false,10001/TS_0002/Reconstructions/VoxelSpacing13.480/Annotations/119/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134624,246364
+252,13.48,data-portal,246368,membrane-tubule,false,10001/TS_0002/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134626,246368
+254,13.48,data-portal,246378,cytoplasm,false,10001/TS_0004/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134631,246378
+254,13.48,data-portal,246382,membrane-tubule,false,10001/TS_0004/Reconstructions/VoxelSpacing13.480/Annotations/123/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134633,246382
+254,13.48,data-portal,246384,mitochondrion,false,10001/TS_0004/Reconstructions/VoxelSpacing13.480/Annotations/124/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134634,246384
+254,13.48,data-portal,246380,vesicle,false,10001/TS_0004/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134632,246380
+255,13.48,data-portal,246388,vesicle,false,10001/TS_0005/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134636,246388
+255,13.48,data-portal,246386,cytoplasm,false,10001/TS_0005/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134635,246386
+255,13.48,data-portal,246390,membrane-tubule,false,10001/TS_0005/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134637,246390
+256,13.48,data-portal,246400,membrane-tubule,false,10001/TS_0006/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134642,246400
+256,13.48,data-portal,246402,mitochondrion,false,10001/TS_0006/Reconstructions/VoxelSpacing13.480/Annotations/122/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134643,246402
+256,13.48,data-portal,246396,nuclear-envelope,false,10001/TS_0006/Reconstructions/VoxelSpacing13.480/Annotations/119/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134640,246396
+256,13.48,data-portal,246394,nucleus,false,10001/TS_0006/Reconstructions/VoxelSpacing13.480/Annotations/118/nucleus-1.0_segmentationmask.zarr,nucleus,,134639,246394
+256,13.48,data-portal,246398,vesicle,false,10001/TS_0006/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134641,246398
+256,13.48,data-portal,246392,cytoplasm,false,10001/TS_0006/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134638,246392
+257,13.48,data-portal,246406,nucleus,false,10001/TS_0007/Reconstructions/VoxelSpacing13.480/Annotations/118/nucleus-1.0_segmentationmask.zarr,nucleus,,134645,246406
+257,13.48,data-portal,246412,mitochondrion,false,10001/TS_0007/Reconstructions/VoxelSpacing13.480/Annotations/122/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134648,246412
+257,13.48,data-portal,246410,membrane-tubule,false,10001/TS_0007/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134647,246410
+257,13.48,data-portal,246408,nuclear-envelope,false,10001/TS_0007/Reconstructions/VoxelSpacing13.480/Annotations/119/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134646,246408
+257,13.48,data-portal,246404,cytoplasm,false,10001/TS_0007/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134644,246404
+258,13.48,data-portal,246416,vesicle,false,10001/TS_0008/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134650,246416
+258,13.48,data-portal,246420,mitochondrion,false,10001/TS_0008/Reconstructions/VoxelSpacing13.480/Annotations/122/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134652,246420
+258,13.48,data-portal,246414,cytoplasm,false,10001/TS_0008/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134649,246414
+258,13.48,data-portal,246418,membrane-tubule,false,10001/TS_0008/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134651,246418
+259,13.48,data-portal,246424,nucleus,false,10001/TS_0009/Reconstructions/VoxelSpacing13.480/Annotations/118/nucleus-1.0_segmentationmask.zarr,nucleus,,134654,246424
+259,13.48,data-portal,246422,cytoplasm,false,10001/TS_0009/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134653,246422
+259,13.48,data-portal,246430,membrane-tubule,false,10001/TS_0009/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134657,246430
+259,13.48,data-portal,246426,nuclear-envelope,false,10001/TS_0009/Reconstructions/VoxelSpacing13.480/Annotations/119/nuclear_envelope-1.0_segmentationmask.zarr,nuclear envelope,,134655,246426
+259,13.48,data-portal,246428,vesicle,false,10001/TS_0009/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134656,246428
+251,13.48,data-portal,246354,vesicle,false,10001/TS_0001/Reconstructions/VoxelSpacing13.480/Annotations/120/vesicle-1.0_segmentationmask.zarr,vesicle,,134619,246354
+251,13.48,data-portal,246358,mitochondrion,false,10001/TS_0001/Reconstructions/VoxelSpacing13.480/Annotations/122/mitochondrion-1.0_segmentationmask.zarr,mitochondrion,,134621,246358
+251,13.48,data-portal,246352,cytoplasm,false,10001/TS_0001/Reconstructions/VoxelSpacing13.480/Annotations/117/cytoplasm-1.0_segmentationmask.zarr,cytoplasm,,134618,246352
+251,13.48,data-portal,246356,membrane-tubule,false,10001/TS_0001/Reconstructions/VoxelSpacing13.480/Annotations/121/membrane_enclosed_lumen-1.0_segmentationmask.zarr,membrane-enclosed lumen,,134620,246356

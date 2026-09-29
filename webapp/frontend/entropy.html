@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slice finder</title>
+  <link rel="stylesheet" href="entropy.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="brand">Slice finder</div>
+    <select id="tomo" class="pill" aria-label="tomogram"></select>
+    <div id="chips" class="chips" aria-label="suggested slices"></div>
+    <div id="uchips" class="chips" aria-label="least sure slices"></div>
+    <div class="spacer"></div>
+    <!-- background prior: automatic (ratio of painted pixels), no control -->
+    <span id="livestat" class="livestat" aria-live="polite"></span>
+    <button id="tgGal" class="toggle" aria-pressed="false" hidden title="all tomograms of the project with the current prediction (G)">Gallery</button>
+    <!-- classifier head: U-Net (MLP / positive-only kept in code, not offered) -->
+    <button id="clearg" class="toggle danger" title="delete the prediction AND all scribbles / accepted objects (every tomogram of the project); asks first">Clear all</button>
+    <div class="seg" role="group" aria-label="layers">
+      <button id="tgPred" class="toggle" aria-pressed="false" disabled title="P">Prediction</button>
+      <button id="tgUns" class="toggle" aria-pressed="false" disabled title="where the model is unsure (U)">Unsure</button>
+      <button id="tgOv" class="toggle" aria-pressed="false" title="PCA-RGB of the features (O)">Features</button>
+      <button id="tgPlot" class="toggle" aria-pressed="true" title="entropy curve under the image">Entropy</button>
+    </div>
+    <div class="pop">
+      <button id="tgSet" class="icon" aria-label="display settings" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <div id="settings" class="panel" hidden>
+        <label>Contrast min <input id="cmin" type="range" min="0" max="255" value="10"></label>
+        <label>Contrast max <input id="cmax" type="range" min="0" max="255" value="245"></label>
+        <label>Overlay opacity <input id="ovalpha" type="range" min="0" max="100" value="55"></label>
+        <label>Prediction opacity <input id="predalpha" type="range" min="0" max="100" value="60"></label>
+        <label>Scribble opacity <input id="annalpha" type="range" min="0" max="100" value="75"></label>
+        <label class="inline"><input id="zavg" type="checkbox" checked> average predictions over z ± 1</label>
+        <button id="export" class="ghost" disabled>Export label volume</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+    <div class="view" id="view">
+      <canvas id="canvas" aria-label="gray-8 slab"></canvas>
+      <img id="pred" class="layer" alt="" hidden>
+      <img id="uns" class="layer" alt="" hidden>
+      <canvas id="dense" class="layer"></canvas>
+      <canvas id="annot" class="layer"></canvas>
+      <canvas id="nniobj" class="layer"></canvas>
+      <canvas id="cursor" class="layer"></canvas>
+    </div>
+
+    <nav class="tools" aria-label="annotation tools">
+      <button data-tool="brush" title="Brush (B)" class="on"><svg viewBox="0 0 24 24"><path d="M4 20c3 0 5-1.5 5-4 0-1.3-1-2.3-2.2-2.3C5.3 13.7 4 15 4 16.5V20zm5.5-6.2L19 4.3 20.7 6l-9.5 9.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg></button>
+      <button data-tool="erase" title="Eraser (E)"><svg viewBox="0 0 24 24"><path d="M4 16l8.5-8.5a2 2 0 0 1 2.8 0l3.2 3.2a2 2 0 0 1 0 2.8L13 19H8l-4-3zm4 3h12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></svg></button>
+      <button data-tool="lasso" title="Lasso fill (L)"><svg viewBox="0 0 24 24"><path d="M5 10c0-3.3 3.1-6 7-6s7 2.7 7 6-3.1 6-7 6c-1 0-2-.2-2.9-.5M7.5 14.5C6 16 6 19 8.5 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></button>
+      <button data-tool="wand" title="Magic wand: similar RADIO features (W)"><svg viewBox="0 0 24 24"><path d="M4 20L15 9m2-5v3m0 6v3m-6-9h3m6 0h3m-4.2-4.2l-2 2m4.4 4.4l2 2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></button>
+      <button data-tool="nni" hidden title="nnInteractive (N): drag a box around an object; click = add point, Alt+click = negative point"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="13" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-dasharray="3 2"/><path d="M19 3v4M17 5h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></button>
+      <button data-tool="pan" title="Pan (H, or hold Space)"><svg viewBox="0 0 24 24"><path d="M8 12V6.5a1.5 1.5 0 0 1 3 0V11m0-5.5a1.5 1.5 0 0 1 3 0V11m0-4a1.5 1.5 0 0 1 3 0v6c0 4-2.5 7-6.5 7-2.5 0-4-1-5.5-3L4 13.5a1.5 1.5 0 0 1 2.4-1.8L8 13.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+      <div class="sep"></div>
+      <label class="size" title="Brush size ([ / ])"><span id="sizev">24</span><input id="size" type="range" min="2" max="120" value="24" aria-label="brush size"></label>
+      <label class="size wandopt" title="Wand similarity threshold" hidden><span id="thrv">0.60</span><input id="thr" type="range" min="20" max="95" value="60" aria-label="wand threshold"></label>
+      <button id="undo" title="Undo (Ctrl+Z)"><svg viewBox="0 0 24 24"><path d="M9 7L4 12l5 5M4 12h10a6 6 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" transform="translate(0 -3)"/></svg></button>
+    </nav>
+
+    <aside class="classes" aria-label="classes">
+      <div class="chead">Classes</div>
+      <ul id="clist"></ul>
+      <button id="addcls" class="ghost">+ Add class</button>
+      <div class="hint">1–9 to switch · ✎ to rename</div>
+    </aside>
+
+    <div id="toast" class="toast" hidden></div>
+    <section id="nnipanel" class="nnipanel" hidden aria-label="nnInteractive object">
+      <div class="nhead">nnInteractive <span id="nnistat" class="muted"></span></div>
+      <div id="nniinfo" class="small muted">Drag a box around an object on this slice.</div>
+      <div class="zrow"><label>keep z <input id="nzfrom" type="number" min="0" placeholder="from"></label>
+        <label>to <input id="nzto" type="number" min="0" placeholder="to"></label></div>
+      <div class="nbtns"><button id="nniaccept" class="cta" disabled>Accept</button><button id="nnidiscard" class="ghost" disabled>Discard</button></div>
+      <label class="small"><input id="ncomplete" type="checkbox"> all objects marked in this tomogram (the rest is background)</label>
+    </section>
+    <section id="gallery" class="gallery" hidden aria-label="all tomograms">
+      <div class="ghead"><span id="gtitle">All tomograms</span><span class="muted" id="gsub"></span></div>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="dock">
+    <div id="plotbox" class="plotbox">
+      <svg id="plot" role="img" aria-label="entropy versus slice"></svg>
+      <div id="tip" class="tip"></div>
+    </div>
+    <div class="slider">
+      <span id="zlab" class="zlab">z 0</span>
+      <input id="z" type="range" min="0" max="0" value="0" aria-label="slice">
+      <span id="nzlab" class="nzlab"></span>
+    </div>
+  </footer>
+  <script src="dist/entropy.js"></script>
+</body>
+</html>
