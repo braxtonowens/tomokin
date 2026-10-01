@@ -10,7 +10,7 @@ tomokin is a small interactive tool for segmenting cellular cryo-electron tomogr
 - One classifier is shared by all tomograms of a project. Strokes on one tomogram segment the others, and a gallery
   shows all of them live.
 
-Version **0.0.1**: an early research prototype.
+Version **0.0.2**: an early research prototype.
 
 ## What it does
 
@@ -18,14 +18,15 @@ Version **0.0.1**: an early research prototype.
   slices in the valleys between entropy humps, which usually hold the biological content. The top and bottom 20% of
   the volume (reconstruction artefacts) are ignored.
 - **Annotation tools.** Brush, eraser, lasso fill and a magic wand that selects regions of similar RADIO features.
-  Classes can be renamed. Class 1 is *unassigned*: an optional correction brush for places that belong to none of
-  your classes.
-- **Live U-Net.** Every edit refits the U-Net in about 1–2 s, warm-started from the previous fit. The prediction
-  overlay updates on the current slice, an *Unsure* layer shows where the model hesitates, and "?" chips point to
-  the slices it is least sure about.
+  Classes can be renamed (✎) and removed (×; this deletes their scribbles on every tomogram of the project). Class 1
+  is *unassigned*: a correction brush for places that belong to none of your classes, and it is always kept.
+- **Live prediction.** Every edit refits the U-Net in about 1–2 s, warm-started from the previous fit. The prediction
+  overlay updates on the current slice, and an *Unsure* layer shows where the model hesitates. Undo (Ctrl+Z) restores
+  the labels *and* the exact model from before the edit, without retraining.
+- **Entropy graph.** Under the image: the suggested slices (numbered dots), the slices the model is least sure about
+  ("?" markers) and one coloured bar per annotated slice. Click any of them to go to that slice.
 - **Projects.** A project is a list of tomograms, typically from one dataset. Scribbles from all of them train one
-  classifier. The **Gallery** shows every tomogram's suggested slice with the current prediction, and the entropy
-  graph marks which slices you annotated.
+  classifier. The **Gallery** shows every tomogram's suggested slice with the current prediction.
 - **Export.** Writes a full-resolution label volume per tomogram.
 
 ## How it works
@@ -37,9 +38,13 @@ Version **0.0.1**: an early research prototype.
    trace, and compute the Shannon entropy of its eigenvalues. `entropy_fast.py` computes this directly from the
    stored PCA features.
 3. **U-Net head.** The RADIO features are reduced 256 → 32 and upsampled, then combined with the image at quarter
-   resolution. The network has 3 levels and about 0.15 M parameters. It trains only on painted pixels (class-balanced
+   resolution. The network has 3 levels and about 0.23 M parameters. It trains only on painted pixels (class-balanced
    cross-entropy, random crops aligned to the token grid, flips), and prediction happens at 4-px resolution. A
    background prior is set automatically from the ratio of painted pixels.
+4. **kNN half.** After every fit, the features at the painted pixels (up to 60k, in the painted class ratio) form a
+   nearest-neighbour bank. The shown prediction is the average of the U-Net's class probabilities and the class
+   fractions among each token's 16 most similar painted pixels. In a simulated 16-slice annotation session on
+   POPSICLE bacteria this scored a mean Dice of 0.45, against 0.34 for the U-Net and 0.40 for kNN alone.
 
 ## Requirements
 

@@ -231,7 +231,8 @@
     let lasso = [], panStart = [0, 0, 0, 0];
     const radius = () => +$("size").value / 2;
     function snapshot() {
-        undo.push({ z, data: lab().slice() });
+        // v / fresh: the model before this edit, and whether it was fitted on exactly the labels before this edit
+        undo.push({ z, data: lab().slice(), v: version, fresh: segmented && !changedSinceFit && !liveBusy && !livePending });
         if (undo.length > 30)
             undo.shift();
     }
@@ -414,7 +415,9 @@
         b.addEventListener("click", () => setTool(b.dataset.tool));
     $("size").addEventListener("input", () => { $("sizev").textContent = $("size").value; });
     $("thr").addEventListener("input", () => { $("thrv").textContent = (+$("thr").value / 100).toFixed(2); });
-    function doUndo() {
+    // Undo restores the labels AND, when possible, the exact model from before the edit (no retraining); otherwise
+    // (the model was not up to date with the labels at that moment) it refits as after any edit.
+    async function doUndo() {
         const u = undo.pop();
         if (!u)
             return;
@@ -423,7 +426,36 @@
             show(u.z);
         else
             refreshAnnot();
-        edited(u.z);
+        if (!u.fresh || !info) {
+            edited(u.z);
+            return;
+        }
+        clearTimeout(liveT);
+        livePending = false;
+        dirty.add(u.z);
+        updateZ(u.z);
+        plot();
+        save();
+        while (liveBusy)
+            await new Promise((res) => setTimeout(res, 50)); // let a fit already running finish first
+        const run = info.run;
+        const r = await post("/api/seg/restore", { run, project: PROJECT, version: u.v, prior }).catch(() => null);
+        if (!r || info?.run !== run) {
+            edited(u.z);
+            return;
+        }
+        version = r.version;
+        unsure = r.unsure;
+        changedSinceFit = false;
+        if (priorAuto && r.prior_default) {
+            prior = r.prior_default;
+            showPrior();
+        }
+        uchips([...zClasses.keys()]);
+        $("livestat").textContent = `undo: restored the model from before that edit`;
+        await refreshPred();
+        if (!$("gallery").hidden)
+            refreshGallery();
     }
     $("undo").addEventListener("click", doUndo);
     // ------------------------------------------------------------ classes
@@ -446,7 +478,14 @@
             ed.className = "ren";
             ed.title = "rename";
             ed.textContent = "✎";
-            li.append(sw, nm, ct, ed);
+            const del = document.createElement("button");
+            del.className = "ren del";
+            del.title = "remove this class";
+            del.textContent = "×";
+            if (c.id === 1)
+                del.style.visibility = "hidden"; // unassigned is the model's background: always kept
+            li.append(sw, nm, ct, ed, del);
+            del.addEventListener("click", (e) => { e.stopPropagation(); removeClass(c); });
             li.addEventListener("click", () => {
                 if (cur === c.id)
                     return;
@@ -492,6 +531,40 @@
                 n[a[i]]++; // strided estimate
         classes.forEach((c) => { const e = document.getElementById(`ct${c.id}`); if (e)
             e.textContent = n[c.id] ? `~${(n[c.id] * 7).toLocaleString()}` : ""; });
+    }
+    async function removeClass(c) {
+        if (!info || c.id === 1)
+            return;
+        const scope = PROJECT ? "every tomogram of this project" : "this tomogram";
+        if (!confirm(`Remove class "${c.name}"? Its scribbles and accepted objects on ${scope} are deleted, and the classes after it move up one number. This cannot be undone.`))
+            return;
+        try {
+            await flushSave();
+        }
+        catch {
+            toast("Could not save the latest scribbles — try again");
+            return;
+        }
+        const r = await post("/api/seg/remove_class", { run: info.run, project: PROJECT, k: c.id }).catch((e) => { toast(String(e)); return null; });
+        if (!r)
+            return;
+        classes = classes.filter((x) => x.id !== c.id).map((x) => ({ ...x, id: x.id > c.id ? x.id - 1 : x.id }));
+        cur = cur === c.id ? 1 : cur > c.id ? cur - 1 : cur;
+        const keep = cur;
+        applyCleared();
+        setCleared(false);
+        epoch++;
+        await loadAnnotations(info.run, W, H); // reload the renumbered scribbles
+        cur = Math.min(keep, classes.length);
+        renderClasses();
+        plot();
+        refreshAnnot();
+        hasDense = false;
+        refreshDense();
+        $("livestat").textContent = `removed "${c.name}" — refitting`;
+        toast(`Removed class "${c.name}"`);
+        explicitNext = true;
+        scheduleLive();
     }
     $("addcls").addEventListener("click", () => {
         if (classes.length >= 9) {
@@ -752,11 +825,15 @@
         }
     }
     // least-sure slices (inside the kept range, spread out, not already annotated) as "annotate here next" chips
+    let upicks = []; // least-sure slices, also drawn as "?" markers in the entropy graph
     function uchips(annotated) {
         const box = $("uchips");
         box.replaceChildren();
-        if (!info || !unsure.length)
+        upicks = [];
+        if (!info || !unsure.length) {
+            plot();
             return;
+        }
         const sep = Math.max(10, Math.round(info.nz / 20)), picks = [];
         const order = [...unsure.keys()].filter((zz) => zz >= lo && zz < hi && !annotated.includes(zz)).sort((a, b) => unsure[b] - unsure[a]);
         for (const zz of order) {
@@ -765,6 +842,8 @@
             if (picks.length === 3)
                 break;
         }
+        upicks = picks;
+        plot();
         for (const zz of picks) {
             const b = document.createElement("button");
             b.className = "chip q";
@@ -868,16 +947,32 @@
         const d = curve.map((v, i) => `${i ? "L" : "M"}${sx(i).toFixed(1)},${sy(v).toFixed(1)}`).join("");
         el("path", { d: `${d}L${sx(n)},${Hp}L${sx(0)},${Hp}Z`, class: "area" });
         el("path", { d, class: "curve" });
-        vals.forEach((v, i) => {
-            el("circle", { cx: sx(v.z), cy: sy(curve[v.z]), r: 5, class: "valley" });
-            el("text", { x: sx(v.z), y: sy(curve[v.z]) + 18, "text-anchor": "middle", class: "vlabel" }, String(i + 1));
+        // every marker is clickable: it takes you to its slice (a larger transparent hit area, with a tooltip)
+        const go = (e, zz, title) => {
+            const t = document.createElementNS(NS, "title");
+            t.textContent = title;
+            e.appendChild(t);
+            e.addEventListener("mousedown", (ev) => { ev.stopPropagation(); show(zz); });
+        };
+        const sugg = vals.length ? vals.map((v, i) => ({ z: v.z, label: String(i + 1), title: `suggested slice ${i + 1}: z ${v.z} (valley depth ${Math.round(100 * v.frac)}% of range)` }))
+            : [{ z: centreBest(), label: "★", title: `suggested slice: z ${centreBest()} (no valley between humps: best centre-weighted slice)` }];
+        sugg.forEach((v) => {
+            el("circle", { cx: sx(v.z), cy: sy(curve[v.z]), r: v.z === z ? 7 : 5, class: v.z === z ? "valley on" : "valley" });
+            el("text", { x: sx(v.z), y: sy(curve[v.z]) + 18, "text-anchor": "middle", class: "vlabel" }, v.label);
+            go(el("circle", { cx: sx(v.z), cy: sy(curve[v.z]) + 5, r: 13, class: "hit" }), v.z, v.title);
         });
-        // manual annotations: one tick per annotated slice along the bottom, split by the classes painted there
+        for (const zz of upicks) { // least-sure slices: "?" markers along the top
+            el("rect", { x: sx(zz) - 8, y: 2, width: 16, height: 16, rx: 5, class: zz === z ? "qmark on" : "qmark" });
+            el("text", { x: sx(zz), y: 14, "text-anchor": "middle", class: "qtext" }, "?");
+            go(el("rect", { x: sx(zz) - 11, y: 0, width: 22, height: 22, class: "hit" }), zz, `model least sure here: z ${zz} (mean uncertainty ${unsure[zz]?.toFixed(2) ?? ""}) · annotate next`);
+        }
+        // manual annotations: one tick per annotated slice along the bottom, split by the classes painted there; clickable
         const tickH = 18;
         for (const [zz, cls] of zClasses) {
             const seg = tickH / cls.length;
             cls.forEach((k, j) => el("rect", { x: sx(zz) - 2.5, y: Hp - tickH + j * seg, width: 5, height: seg,
-                fill: classes[k - 1]?.color ?? "#888", class: "annotick" }));
+                fill: classes[k - 1]?.color ?? "#888", class: zz === z ? "annotick on" : "annotick" }));
+            go(el("rect", { x: sx(zz) - 5, y: Hp - tickH - 2, width: 10, height: tickH + 2, class: "hit" }), zz, `z ${zz}: ${cls.map((k) => classes[k - 1]?.name ?? k).join(" + ")} · click to go there`);
         }
         if (zClasses.size)
             el("text", { x: 4, y: Hp - tickH - 3, class: "annolabel" }, `✎ ${zClasses.size} annotated slice${zClasses.size > 1 ? "s" : ""}`);
@@ -1271,7 +1366,10 @@
     }
     // ------------------------------------------------------------ controls
     $("z").addEventListener("input", (e) => show(+e.target.value));
-    $("tgPlot").addEventListener("click", () => { const v = !on("tgPlot"); setOn("tgPlot", v); $("plotbox").hidden = !v; plot(); });
+    function chipsVisible() { for (const id of ["chips", "uchips"])
+        $(id).hidden = on("tgPlot"); } // in the graph instead
+    $("tgPlot").addEventListener("click", () => { const v = !on("tgPlot"); setOn("tgPlot", v); $("plotbox").hidden = !v; chipsVisible(); plot(); });
+    chipsVisible();
     $("tgOv").addEventListener("click", () => { setOn("tgOv", !on("tgOv")); show(z); });
     $("tgSet").addEventListener("click", () => { const p = $("settings"); p.hidden = !p.hidden; $("tgSet").setAttribute("aria-expanded", String(!p.hidden)); });
     document.addEventListener("pointerdown", (ev) => { if (!ev.target.closest(".pop"))

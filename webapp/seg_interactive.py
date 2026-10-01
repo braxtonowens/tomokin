@@ -226,6 +226,9 @@ def predict_slice(run, z, shape, zavg=0, key=None, set_=None, prior=1.0):
     with torch.no_grad():
         p = torch.softmax(logits(run, zs, key, set_, 1.0 if m.get("calib") else prior), 1).mean(0, keepdim=True)
         p = F.interpolate(p, size=shape, mode="bilinear", align_corners=False)[0]
+        if m.get("knn") is not None:  # U-Net + kNN, half and half (knn_unet16.py: 0.449 vs 0.339 / 0.400 alone)
+            pk = F.interpolate(knn_probs(run, zs, set_ or m["set"], m)[None], size=shape, mode="bilinear", align_corners=False)[0]
+            p = 0.5 * p + 0.5 * pk
         if m.get("calib"):
             lab, conf, uns = decide(p, m["calib"])
             return lab.cpu().numpy().astype(np.uint8), conf.cpu().numpy(), uns.cpu().numpy()
@@ -324,6 +327,7 @@ def train_project(name, cur_set, cur_run, n_classes, prior=None, head="mlp"):
     warm = prev.get("net") if prev.get("kind") == head and prev.get("C") == C else None
     if head == "unet":  # class 1 = painted "unassigned" examples; automatic background prior (painted-pixel ratio)
         net, _ = fit_unet(unet_slices(runs), C, warm, steps=150 if warm is not None else 300)
+        bank = knn_bank(runs)
         acc = None  # (JSON has no NaN)
         cnt = torch.bincount(y, minlength=C).float()
     elif head == "unet_pu":  # experimental: implicit unassigned + calibration, no painted background needed
@@ -350,14 +354,17 @@ def train_project(name, cur_set, cur_run, n_classes, prior=None, head="mlp"):
     version = _models.get(key, {}).get("version", 0) + 1
     _models[key] = {"net": net, "mu": None, "sd": None, "C": C, "version": version, "present": present.tolist(),
                     "kind": head, "set": cur_set, "calib": calib}
+    if head == "unet":
+        _models[key]["knn"] = bank
     if calib is not None:
         prior = 1.0  # calibrated heads need no prior
     fits = PROJECTS / Path(name).name / "fits"
     fits.mkdir(parents=True, exist_ok=True)
+    fit_file = fits / f"fit_{int(time.time() * 1000)}.pt"
     torch.save({"kind": head, "state": {k: v.cpu() for k, v in net.state_dict().items()}, "D": X.shape[1], "C": C,
                 "version": version, "time": time.time(), "annotated": used, "per_class": cnt.int().tolist(),
-                "painted": raw, "prior": prior, "prior_default": pdef, "train_acc": acc, "calib": calib},
-               fits / f"fit_{int(time.time() * 1000)}.pt")
+                "painted": raw, "prior": prior, "prior_default": pdef, "train_acc": acc, "calib": calib}, fit_file)
+    _models[key]["fit_file"] = str(fit_file)
     nz = len(gfeats(cur_set, cur_run))
     unsure, frac = [], torch.zeros(C, device=DEV)
     with torch.no_grad():
@@ -376,6 +383,95 @@ def train_project(name, cur_set, cur_run, n_classes, prior=None, head="mlp"):
             "slices": [u[1] for u in used if u[0] == cur_run], "n_slices": len(used), "n_tomograms": len(runs_used),
             "volume_fraction": (frac / frac.sum()).tolist(), "unsure": unsure, "prior_default": pdef, "painted": raw,
             "head": head, "fit_seconds": fit_s}
+
+
+# ---------------------------------------------------------------- model history: undo restores the model from before a stroke
+_history = {}  # classifier key -> OrderedDict {version: (copy of the _models entry, prior_default)}, last 30 fits
+
+
+def remember_fit(key, result):
+    import copy
+    from collections import OrderedDict
+    h = _history.setdefault(key, OrderedDict())
+    m = _models[key]
+    snap = copy.deepcopy({k: v for k, v in m.items() if k != "knn"})
+    if m.get("knn") is not None:  # the kNN bank is never changed in place: keep a CPU reference, not a copy
+        snap["knn"] = tuple(t.cpu() for t in m["knn"])
+    h[m["version"]] = (snap, result.get("prior_default"))
+    while len(h) > 30:
+        h.popitem(last=False)
+
+
+def restore(key, version, cur_set, cur_run, prior):
+    """Make the model of fit `version` current again (under a new version number); the restore is logged as a copy of
+    that fit's log file with 'restored_from'. -> dict for the page, or None if the version is no longer kept."""
+    import copy
+    h = _history.get(key)
+    if not h or version not in h:
+        return None
+    m, pdef = h[version]
+    new = max(max(h), _models.get(key, {}).get("version", 0)) + 1
+    _models[key] = {**copy.deepcopy({k: v for k, v in m.items() if k != "knn"}), "version": new}
+    if m.get("knn") is not None:
+        _models[key]["knn"] = tuple(t.to(DEV) for t in m["knn"])
+    h[new] = (m | {"version": new}, pdef)
+    _cleared.discard(key)
+    f = m.get("fit_file")
+    if f and Path(f).exists():
+        import time
+        d = torch.load(f, weights_only=False)
+        d.update(version=new, time=time.time(), restored_from=version)
+        torch.save(d, Path(f).parent / f"fit_{int(time.time() * 1000)}.pt")
+    r = profile(key, cur_set, cur_run, prior)
+    return {"version": new, "restored_from": version, "prior_default": pdef, "unsure": r["unsure"] if r else []}
+
+
+# ---------------------------------------------------------------- kNN half of the prediction
+KNN_K, KNN_PER_SLICE, KNN_CAP = 16, 30000, 60000
+
+
+def knn_bank(runs, seed=0):
+    """Features (standardized per tomogram, L2-normalized, fp16) at painted pixels of every annotated slice of the
+    project, sampled uniformly within each slice (so the class ratio is the painted ratio), at most KNN_PER_SLICE per
+    slice and KNN_CAP in all; labels 0..C-1 (painted class - 1). -> (X (N, D), y (N,)) or None."""
+    rng = np.random.default_rng(seed)
+    Xs, ys = [], []
+    for r in runs:
+        for z in load_annotations(r["run"])["slices"]:
+            lab = np.array(Image.open(adir(r["run"]) / f"z{z}.png"))
+            yy, xx = np.nonzero(lab > 0)
+            if not len(yy):
+                continue
+            if len(yy) > KNN_PER_SLICE:
+                k = rng.choice(len(yy), KNN_PER_SLICE, replace=False)
+                yy, xx = yy[k], xx[k]
+            feats(r["set"], r["run"])
+            f = _gpu["F"][z].float() if _gpu["run"] == r["run"] else torch.from_numpy(np.asarray(_feats[r["run"]][z], dtype=np.float32)).to(DEV)
+            H, W = lab.shape
+            g = torch.stack([torch.from_numpy((xx + 0.5) / W * 2 - 1), torch.from_numpy((yy + 0.5) / H * 2 - 1)], -1)
+            v = F.grid_sample(f[None], g.float().to(DEV)[None, None], mode="bilinear", align_corners=False)[0, :, 0].T
+            mu, sd = stats(r["set"], r["run"])
+            Xs.append(F.normalize((v - mu) / sd, dim=1).half())
+            ys.append(torch.from_numpy(lab[yy, xx].astype(np.int64) - 1).to(DEV))
+    if not Xs:
+        return None
+    X, y = torch.cat(Xs), torch.cat(ys)
+    if len(X) > KNN_CAP:
+        k = torch.from_numpy(rng.choice(len(X), KNN_CAP, replace=False)).to(DEV)
+        X, y = X[k], y[k]
+    return X, y
+
+
+def knn_probs(run, zs, set_, m):
+    """Class fractions among the KNN_K most similar bank features, per token, averaged over zs -> (C, gh, gw)."""
+    X, y = m["knn"]
+    x, _ = unet_inputs(set_, run, zs)
+    out = 0
+    for f in F.normalize(x, dim=1):
+        D, gh, gw = f.shape
+        idx = (f.flatten(1).T.half() @ X.T).topk(min(KNN_K, len(X)), dim=1).indices
+        out = out + F.one_hot(y[idx], m["C"]).float().mean(1).T.reshape(m["C"], gh, gw)
+    return out / len(x)
 
 
 def log_prior(name, prior):
@@ -416,6 +512,41 @@ def check_cleared(key, explicit):
     if key in _cleared and not explicit:
         raise ValueError("guess cleared")
     _cleared.discard(key)
+
+
+def remove_class(runs, k):
+    """Delete class k (k >= 2) from these runs: its scribble pixels and accepted-object voxels become unlabelled,
+    classes above k move down by one (k+1 -> k, ...), and it leaves classes.json (names / colours of the others kept).
+    -> number of slices / volumes changed."""
+    k = int(k)
+    if k < 2:
+        raise ValueError("class 1 (unassigned) cannot be removed")
+    lut = np.arange(256, dtype=np.uint8)
+    lut[k] = 0
+    lut[k + 1:] = np.arange(k, 255, dtype=np.uint8)
+    n = 0
+    for run in runs:
+        d = OUT / Path(run).name
+        for f in (d / "annot").glob("z*.png"):
+            a = np.array(Image.open(f))
+            if (a >= k).any():
+                b = lut[a]
+                if b.any():
+                    Image.fromarray(b).save(f)
+                else:
+                    f.unlink()
+                n += 1
+        if (d / "dense.npy").exists():
+            a = np.load(d / "dense.npy")
+            if (a >= k).any():
+                np.save(d / "dense.npy", lut[a])
+                n += 1
+        cf = d / "classes.json"
+        if cf.exists():
+            cl = json.load(open(cf))
+            cl = [{**c, "id": c["id"] - (c["id"] > k)} for c in cl if c["id"] != k]
+            json.dump(cl, open(cf, "w"), indent=1)
+    return n
 
 
 def clear_scribbles(runs):

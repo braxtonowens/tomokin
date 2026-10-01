@@ -75,7 +75,7 @@ button, select, input { font: inherit; color: inherit; }
            border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
 .chead { font-size: 12px; font-weight: 650; color: var(--muted); letter-spacing: 0.02em; }
 #clist { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }
-#clist li { display: grid; grid-template-columns: 18px 1fr auto auto; align-items: center; gap: 8px; padding: 6px 8px;
+#clist li { display: grid; grid-template-columns: 18px 1fr auto auto auto; align-items: center; gap: 8px; padding: 6px 8px;
             border-radius: 10px; cursor: pointer; border: 1px solid transparent; }
 #clist li:hover { background: var(--hover); }
 #clist li.on { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
@@ -180,3 +180,13 @@ input[type="range"] { accent-color: var(--accent); width: 100%; }
 #plot .annolabel { fill: var(--muted); font-size: 11px; }
 #clist .ren { border: 0; background: transparent; cursor: pointer; color: var(--muted); padding: 0 2px; font-size: 13px; }
 #clist .ren:hover { color: var(--accent); }
+#plot .hit { fill: transparent; cursor: pointer; }
+#plot .valley.on { stroke: var(--ink); stroke-width: 2.5; }
+#plot .qmark { fill: #d98a00; stroke: var(--surface); stroke-width: 1.5; }
+#plot .qmark.on { stroke: var(--ink); stroke-width: 2.5; }
+#plot .qtext { fill: #fff; font-size: 11px; font-weight: 700; pointer-events: none; }
+#plot .annotick.on { stroke: var(--ink); stroke-width: 1.5; }
+#plot .vlabel { pointer-events: none; }
+.chips[hidden] { display: none; }
+#clist .del { font-size: 16px; font-weight: 600; color: #c0392b; border-radius: 6px; padding: 0 5px; }
+#clist .del:hover { background: color-mix(in srgb, #c0392b 15%, transparent); }

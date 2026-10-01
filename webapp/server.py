@@ -417,6 +417,27 @@ def seg_clear(t: SegTrain):
     return {"cleared": si.clear(f"project:{t.project}" if t.project else t.run)}
 
 
+class RemoveClass(BaseModel):
+    run: str
+    project: str = ""
+    k: int
+
+
+@app.post("/api/seg/remove_class")
+def seg_remove_class(r: RemoveClass):
+    """Delete a class from every tomogram of the project (or the one tomogram); the classifier is dropped (its class
+    count changed) and the page refits."""
+    runs = [x["run"] for x in si.project(r.project)["runs"]] if r.project else [r.run]
+    key = f"project:{r.project}" if r.project else r.run
+    try:
+        n = si.remove_class(runs, r.k)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    si._models.pop(key, None)
+    si._history.pop(key, None)  # earlier models have a different set of classes: undo cannot restore them
+    return {"changed": n}
+
+
 @app.post("/api/seg/clear_scribbles")
 def seg_clear_scribbles(t: SegTrain):
     """Delete all scribbles of the project (or of the one tomogram) and the classifier built from them."""
@@ -535,11 +556,31 @@ def seg_train(t: SegTrain):
     with GPU:
         try:
             si.check_cleared(f"project:{t.project}" if t.project else t.run, t.explicit)
-            if t.project:
-                return si.train_project(t.project, info["set"], t.run, t.n_classes, t.prior or None, t.head)
-            return si.train(info["set"], t.run, t.n_classes, t.prior or None)
+            key = f"project:{t.project}" if t.project else t.run
+            r = (si.train_project(t.project, info["set"], t.run, t.n_classes, t.prior or None, t.head) if t.project
+                 else si.train(info["set"], t.run, t.n_classes, t.prior or None))
+            si.remember_fit(key, r)
+            return r
         except ValueError as e:
             raise HTTPException(400, str(e))
+
+
+class SegRestore(BaseModel):
+    run: str
+    project: str = ""
+    version: int
+    prior: float = 1.0
+
+
+@app.post("/api/seg/restore")
+def seg_restore(t: SegRestore):
+    """Undo: make the model of an earlier fit current again (no retraining)."""
+    info = ent_info(t.run)
+    with GPU:
+        r = si.restore(f"project:{t.project}" if t.project else t.run, t.version, info["set"], t.run, t.prior)
+    if r is None:
+        raise HTTPException(404, "that model is no longer kept")
+    return r
 
 
 @app.get("/api/seg/pred")
@@ -611,7 +652,15 @@ def index():
     return FileResponse(FRONT / "index.html", headers={"Cache-Control": "no-store"})
 
 
-app.mount("/", StaticFiles(directory=FRONT), name="frontend")
+class FrontFiles(StaticFiles):
+    """The front end, always revalidated (a changed page or script is picked up on a normal reload)."""
+    async def get_response(self, path, scope):
+        r = await super().get_response(path, scope)
+        r.headers["Cache-Control"] = "no-cache"
+        return r
+
+
+app.mount("/", FrontFiles(directory=FRONT), name="frontend")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8770, log_level="warning")
